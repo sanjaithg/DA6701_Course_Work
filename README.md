@@ -1,54 +1,31 @@
-# DA6701 - Data Science for Finance Coursework
+# DA6701 — Data Science & AI in Finance
 
-This repository contains the coursework and assignments for the **DA6701: Data Science for Finance** course, completed by **Team 14**. The project focuses on the application of machine learning, statistical regularization, and optimization techniques to financial data, ranging from stock price prediction to sophisticated portfolio management.
+Coursework for **DA6701: Data Science & AI in Finance** by **Team 14**
+(Dharunpathi T · ED23B018 — Pranav Raghuram · ED23B054 — Sanjaith Ganeshkumar · ED23B055).
 
-## 👥 Team 14 Members
-- **Dharunpathi T** (ED23B018)
-- **Pranav Raghuram** (ED23B054)
-- **Sanjaith Ganeshkumar** (ED23B055)
+A collection of finance projects covering portfolio construction, covariance regularization,
+machine-learning return prediction, index replication, and goal-based investing. Each project
+is self-contained in its own folder with a write-up (`README.md`) and the Jupyter notebooks
+that produced the results.
 
----
+## Projects
 
-## 📂 Repository Structure
+| Project | Problem |
+|---------|---------|
+| [Mean-Variance-Portfolio-Optimization](Mean-Variance-Portfolio-Optimization/) | Build a 10-asset long-only portfolio from a 30-stock NSE universe via Modern Portfolio Theory, comparing greedy least-correlated and Hierarchical Risk Parity (HRP) asset selection with Monte-Carlo efficient frontiers. |
+| [Sentiment-Aware-Stock-Return-Prediction](Sentiment-Aware-Stock-Return-Prediction/) | Forecast daily returns for six Indian stocks from market, fundamental, macro, and FinBERT news-sentiment data, then build a forward-looking portfolio. |
+| [Regularized-Covariance-Portfolio-Optimization](Regularized-Covariance-Portfolio-Optimization/) | Quantify the instability of sample covariance in Markowitz optimization and fix it with Ledoit-Wolf shrinkage and HRP, stress-tested through turnover and the 2023 SVB crisis. |
+| [Sparse-Index-Replication](Sparse-Index-Replication/) | Replicate the S&P 500 with ≤50 stocks using five methods — LASSO, autoencoder, genetic algorithm, greedy selection, and clustering — minimizing tracking error under a cardinality constraint. |
+| [Goal-Based-Portfolio-Optimization](Goal-Based-Portfolio-Optimization/) | Find the static allocation across five Indian equities that maximizes the probability of hitting a ₹1.5 Cr retirement goal via Monte-Carlo simulation, under two liability schedules. |
 
-The repository is organized into three main assignment modules, each tackling different aspects of financial analytics:
+## Repository Structure
 
-### 📊 Assignment 2: Financial Forecasting & Sentiment Analysis
-Focuses on predicting market movements and analyzing public sentiment for a universe of stocks.
-- **Key Features**:
-  - Stock price predictions for NSE tickers.
-  - Sentiment analysis of financial news/social data.
-  - Initial portfolio optimization strategies.
+Each project folder contains:
+- a `README.md` describing the **problem, procedure, and results** (results taken directly
+  from the notebook outputs), and
+- the **Jupyter notebooks** and supporting files.
 
-### 📈 Assignment 3: Ex-Post ML Techniques for Portfolio Optimization
-An in-depth study of statistical regularization and risk-based portfolio construction using a universe of 12 NSE stocks (TCS, INFY, HDFC Bank, etc.).
-- **Key Features**:
-  - **Ledoit-Wolf Shrinkage**: Improving the condition number of the sample covariance matrix to reduce instability in MPT.
-  - **Markowitz Portfolio Theory (MPT)**: Implementation of Maximum Sharpe Ratio and Global Minimum Variance portfolios.
-  - **Hierarchical Risk Parity (HRP)**: Advanced risk allocation through hierarchical clustering and recursive bisection.
-  - **Visualization**: Covariance heatmaps, HRP dendrograms, and weight sensitivity analysis.
+## Tech Stack
 
-### 🎯 Assignment 4: Tracking Portfolio S&P 500
-Implementation of various machine learning and heuristic models to replicate the performance of the S&P 500 index with a subset of stocks.
-- **Key Features**:
-  - **Autoencoders**: Using deep learning for dimensionality reduction and non-linear feature extraction for index tracking.
-  - **Clustering**: Grouping stocks by performance characteristics to select representatives.
-  - **Genetic Algorithms**: Evolutionary search for optimal portfolio weights.
-  - **Lasso Regression**: Sparse model selection for effective portfolio replication.
-  - **Greedy Algorithms**: Iterative selection of high-impact stocks.
-
----
-
-## 🛠️ Tech Stack
-- **Language**: Python (Jupyter Notebooks)
-- **Data Source**: Yahoo Finance (`yfinance`)
-- **Analysis**: Pandas, NumPy, Scipy
-- **Machine Learning**: Scikit-learn, Autoencoders
-- **Visualization**: Matplotlib, Seaborn
-
----
-
-## 🚀 Key Technical Highlights
-- **Risk Management**: Moving beyond mean-variance optimization to robust methods like HRP that do not require matrix inversion.
-- **Index Replication**: Balancing the trade-off between tracking error and portfolio sparsity (number of stocks).
-- **Statistical Fidelity**: Handling ill-conditioned financial data through shrinkage estimators (Ledoit-Wolf).
+Python · NumPy · pandas · scikit-learn · SciPy · LightGBM · XGBoost · CatBoost · PyTorch
+(FinBERT) · matplotlib — across Jupyter notebooks.

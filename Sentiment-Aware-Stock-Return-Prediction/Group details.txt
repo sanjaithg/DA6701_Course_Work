@@ -1,0 +1,7 @@
+Group details (.txt file) including group number, names, roll numbers of all group members, and percentage contribution
+
+Group 14
+
+Dharunpathi T  (ED23B018)        - 33%
+Pranav Raghuram (ED23B054)       - 33%
+Sanjaith Ganeshkumar(ED23B055)   - 33%
