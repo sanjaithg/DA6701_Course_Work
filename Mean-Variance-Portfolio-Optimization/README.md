@@ -105,6 +105,24 @@ Monte Carlo: 120,010 portfolios; Sharpe range 0.40–1.84. Covariance uses Ledoi
 shrinkage (intensity 0.057, condition number 8.38 vs 9.64 unshrunk). The HRP notebook ends
 at the in-sample backtest (no out-of-sample window).
 
+## Visualisations
+
+### Correlation Heatmap — Greedy-Selected 10 Assets
+![Correlation Heatmap](images/greedy_00.png)
+*Near-zero off-diagonal values confirm the greedy selection achieves strong diversification across the 10 chosen stocks.*
+
+### Efficient Frontier — GMV & Max-Sharpe (Greedy)
+![Efficient Frontier](images/greedy_01.png)
+*Monte Carlo over thousands of long-only portfolios traces the efficient frontier; Max-Sharpe (red star) achieves Sharpe 2.72 in-sample.*
+
+### Cumulative Growth & Drawdown — In-Sample Backtest
+![In-Sample Backtest](images/greedy_02.png)
+*Max-Sharpe significantly outperforms Equal-Weight in-sample; GMV shows the lowest drawdown reflecting its risk-minimization objective.*
+
+### HRP Dendrogram — 30-Stock NSE Universe
+![HRP Dendrogram](images/hrp_00.png)
+*Ward linkage clustering cuts the 30-stock universe into 10 natural risk clusters; one diversified representative is selected per cluster.*
+
 ## Key Takeaways
 
 - The Greedy (correlation-based) Max-Sharpe portfolio is excellent **in-sample**

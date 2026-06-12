@@ -85,6 +85,20 @@ holdout TE.
 All methods exhibit sector bias — typically overweighting Technology and Financial Services
 while underweighting defensive sectors (e.g., LASSO Technology 31.4% → 47.2%).
 
+## Visualisations
+
+### Sparsity vs Tracking Error — LASSO
+![Sparsity vs TE](images/lasso_00.png)
+*Clear sparsity-accuracy trade-off: TE falls from 7.4% at k=12 to 4.55% at k=48; beyond k≈70 gains diminish rapidly.*
+
+### Information Ratio vs Subset Size — LASSO
+![IR vs k](images/lasso_01.png)
+*IR peaks at small k (sparse, high active return) and falls negative beyond k≈65 as over-replication erodes alpha; k=48 sits in the optimal zone.*
+
+### Cumulative Returns: LASSO Portfolio vs S&P 500
+![LASSO vs Index](images/lasso_02.png)
+*48-stock LASSO portfolio closely tracks and slightly outperforms the S&P 500 across the full holdout period (Jul–Dec 2025).*
+
 ## Key Takeaways
 
 - There is a clear **sparsity ↔ tracking-error trade-off**: smaller *k* raises TE; larger *k*

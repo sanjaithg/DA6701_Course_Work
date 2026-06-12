@@ -119,6 +119,24 @@ HRP eliminates the 0%-weight dropouts (HCLTECH, ITC) that Min-Variance MPT force
 | ICICIBANK | 15.84% | 11.31% | **2.70%** |
 | KOTAKBANK | 8.15% | 8.67% | **3.71%** |
 
+## Visualisations
+
+### Sample vs Ledoit-Wolf Covariance — Conditioning Improvement
+![Covariance Comparison](images/regcov_00.png)
+*Ledoit-Wolf shrinkage compresses the dominant eigenvalue and lifts the smallest, reducing condition number 35.6 → 14.96 (2.38×) and enabling safe matrix inversion.*
+
+### HRP Data-Driven Clusters — 12-Stock NSE Universe
+![HRP Dendrogram](images/regcov_02.png)
+*Ward linkage discovers 4 risk clusters independent of GICS sectors; recursive bisection allocates capital proportionally to each cluster's inverse variance.*
+
+### Portfolio Turnover Comparison — Monthly Rebalancing
+![Turnover](images/regcov_03.png)
+*HRP cuts average monthly turnover 41% vs standard MPT, significantly reducing transaction costs under live rebalancing.*
+
+### SVB Crisis (2023) — Banking-Stock Weight Sensitivity
+![SVB Crisis](images/regcov_01.png)
+*Standard MPT banking weights swing wildly during SVB stress (HDFCBANK σ_w 35.5%); HRP weights barely move (σ_w 4.9%), demonstrating superior crisis stability.*
+
 ## Key Takeaways
 
 - Unregularized Markowitz is an "error maximizer": a high condition number (κ ≈ 36, bootstrap

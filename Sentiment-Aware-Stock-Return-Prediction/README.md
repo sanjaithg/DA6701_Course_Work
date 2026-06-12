@@ -133,6 +133,16 @@ Average optimal (tangency) weights, backtested over 62 trading days (Oct–Dec 2
 Directional Hit Ratio inside the equity-curve plot rather than as printed text; the
 allocation and 62-day backtest window are the textual outputs.)*
 
+## Visualisations
+
+### Portfolio Efficient Frontier & Out-of-Sample Backtest
+![Portfolio Analysis](images/portfolio_00.png)
+*Tangency portfolio (max IR on efficient frontier) achieves 56.86% annualized return, IR 4.91, max drawdown −4.34% over 62-day out-of-sample backtest (Oct–Dec 2025). Equity curve rises steadily with small drawdowns.*
+
+### Feature Importance — BHARTIARTL (Random Forest)
+![Feature Importance](images/bhartiartl_08.png)
+*Crude Brent return, gold return and India VIX dominate — macro and commodity signals carry the strongest predictive signal for BHARTIARTL, validating the multi-source data pipeline.*
+
 ## Key Takeaways
 
 - Daily **return level** is near-unpredictable (R² ≈ 0); **direction** is more tractable, so
